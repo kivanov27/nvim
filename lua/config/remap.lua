@@ -28,4 +28,5 @@ vim.keymap.set("n", "<C-m>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>n", "<cmd>lnext<CR>zz", { desc = "[N]ext location" })
 vim.keymap.set("n", "<leader>m", "<cmd>lprev<CR>zz", { desc = "[P]rev location" })
 
+vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make e[x]ecutable" })
