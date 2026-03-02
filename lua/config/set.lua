@@ -10,7 +10,7 @@ vim.o.inccommand = "split"
 vim.o.cursorline = false
 vim.o.scrolloff = 10
 vim.o.confirm = true
-vim.o.winborder = "rounded"
+-- vim.o.winborder = "rounded"
 
 vim.o.updatetime = 50
 vim.o.timeoutlen = 300
