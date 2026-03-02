@@ -1,21 +1,20 @@
 return {
-    {
-        "karb94/neoscroll.nvim",
-        opts = {},
-        config = function(_, opts)
-            require("neoscroll").setup(opts)
-
-            local neoscroll = require("neoscroll")
-
-            vim.keymap.set("n", "<C-d>", function()
-                neoscroll.ctrl_d({ duration = 150 })
-                vim.cmd("normal! zz")
-            end)
-
-            vim.keymap.set("n", "<C-u>", function()
-                neoscroll.ctrl_u({ duration = 150 })
-                vim.cmd("normal! zz")
-            end)
-        end,
+    "karb94/neoscroll.nvim",
+    opts = {
+        mappings = { "<C-u>", "<C-d>" },
     },
+    config = function(_, opts)
+        local neoscroll = require("neoscroll")
+        neoscroll.setup(opts)
+
+        vim.keymap.set("n", "<C-d>", function()
+            neoscroll.ctrl_d({ duration = 150 })
+            vim.cmd("normal! zz")
+        end)
+
+        vim.keymap.set("n", "<C-u>", function()
+            neoscroll.ctrl_u({ duration = 150 })
+            vim.cmd("normal! zz")
+        end)
+    end,
 }
