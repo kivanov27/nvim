@@ -23,7 +23,11 @@ return {
                             package_pending = "➜",
                             package_uninstalled = "✗"
                         }
-                    }
+                    },
+                    registries = {
+                        "github:mason-org/mason-registry",
+                        "github:Crashdummyy/mason-registry",
+                    },
                 }
             },
             {
